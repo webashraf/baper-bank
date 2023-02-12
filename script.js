@@ -1,3 +1,4 @@
+//  Login page script --------------------------------
 document.getElementById('submitButton').addEventListener('click', function(){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -10,3 +11,5 @@ document.getElementById('submitButton').addEventListener('click', function(){
     }
     // console.log(email, password);
 })
+// -------------------------------------------------------
+
