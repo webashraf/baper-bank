@@ -1,16 +1,21 @@
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     // console.log('Clicked');
     const withDrawUserValue = document.getElementById('withdraw-field').value;
+
     const withDrawValue = parseFloat(withDrawUserValue);
     // console.log(withDrawValue);
     let withdrawUpValue = document.getElementById('withdraw-up-value').innerText;
     const withdrawUpvalueToNumber = parseFloat(withdrawUpValue);
-    console.log(withdrawUpvalueToNumber);
+    // console.log(withdrawUpvalueToNumber);
     const totalWithdraw = withDrawValue + withdrawUpvalueToNumber;
-    console.log(withdrawUpValue);
+    // console.log(withdrawUpValue);
     let upBalance = document.getElementById('balnce-up-value');
     document.getElementById('withdraw-field').value = '';
-
+    console.log(withDrawUserValue.length);
+    if (isNaN(withDrawUserValue) || parseFloat(withDrawUserValue) != 'number') {
+        alert('Please Give a valid number!!')
+        return;
+    }
     if (totalWithdraw > upBalance.innerText) {
         alert('Baper bank a eto taka nai')
         return;
